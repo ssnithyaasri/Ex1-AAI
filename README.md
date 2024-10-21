@@ -8,14 +8,16 @@
 To create a bayesian Network for the given dataset in Python
     
 ## Algorithm:
-Step 1:Import necessary libraries: pandas, networkx, matplotlib.pyplot, Bbn, Edge, EdgeType, BbnNode, Variable, EvidenceBuilder, InferenceController<br/>
+Step 1:Import necessary libraries: pandas, networkx, matplotlib.pyplot, Bbn, Edge, EdgeType,
+BbnNode, Variable, EvidenceBuilder, InferenceController<br/>
 Step 2:Set pandas options to display more columns<br/>
 Step 3:Read in weather data from a CSV file using pandas<br/>
 Step 4:Remove records where the target variable RainTomorrow has missing values<br/>
 Step 5:Fill in missing values in other columns with the column mean<br/>
 Step 6:Create bands for variables that will be used in the model (Humidity9amCat, Humidity3pmCat, and WindGustSpeedCat)<br/>
 Step 7:Define a function to calculate probability distributions, which go into the Bayesian Belief Network (BBN)<br/>
-Step 8:Create BbnNode objects for Humidity9amCat, Humidity3pmCat, WindGustSpeedCat, and RainTomorrow, using the probs() function to calculate their probabilities<br/>
+Step 8:Create BbnNode objects for Humidity9amCat, Humidity3pmCat, WindGustSpeedCat, and
+RainTomorrow, using the probs() function to calculate their probabilities<br/>
 Step 9:Create a Bbn object and add the BbnNode objects to it, along with edges between the nodes<br/>
 Step 10:Convert the BBN to a join tree using the InferenceController<br/>
 Step 11:Set node positions for the graph<br/>
@@ -61,7 +63,8 @@ df['Humidity3pmCat']=df['Humidity3pm'].apply(lambda x: '1.>60' if x>60 else '0.<
 # Show a snaphsot of data
 print(df)
 
-# This function helps to calculate probability distribution, which goes into BBN (note, can handle up to 2 parents)
+# This function helps to calculate probability distribution, which goes into BBN
+ (note, can handle up to 2 parents)
 def probs(data, child, parent1=None, parent2=None):
     if parent1==None:
         # Calculate probabilities
