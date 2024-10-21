@@ -7,6 +7,7 @@
 ## Aim :
 
     To create a bayesian Network for the given dataset in Python
+    
 ## Algorithm:
 Step 1:Import necessary libraries: pandas, networkx, matplotlib.pyplot, Bbn, Edge, EdgeType, BbnNode, Variable, EvidenceBuilder, InferenceController<br/>
 Step 2:Set pandas options to display more columns<br/>
@@ -24,7 +25,7 @@ Step 13:Generate the graph using networkx<br/>
 Step 14:Update margins and display the graph using matplotlib.pyplot<br/>
 
 ## Program:
-```
+python```
  pandas as pd # for data manipulation
 import networkx as nx # for drawing graphs
 import matplotlib.pyplot as plt # for drawing graphs
